@@ -4,3 +4,6 @@ for (let p of Array.from(para)) {
     p.remove();
   }
 }
+
+//Note: the best way to loop and manipulate the getElementByTagName()
+//is to use Array.from()
