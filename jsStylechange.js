@@ -10,7 +10,7 @@ btn.addEventListener("click", function () {
   if (none.style.display === "none") {
     none.style.display = "block";
     none.style["font-style"] = "italic";
-    none.style["font-weight"] = "larger";
+    none.style["font-weight"] = "bold";
   } else {
     none.style.display = "none";
   }
@@ -19,3 +19,10 @@ btn.addEventListener("click", function () {
 //note: for the syle properties which have hiphen btw them, we
 // access them using like the way we access arrays using index
 // but here we pass a string not a number
+
+/**
+ * The notation p > a {…} applies the given styles
+ *  to all <a> tags that are direct children of <p> tags.
+ * Similarly, p a {…} applies to all <a> tags inside <p> tags,
+ * whether they are direct or indirect children.
+ */
