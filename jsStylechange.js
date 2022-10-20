@@ -1,7 +1,6 @@
 // Using Js to manipulate the style of an element through
 //the element’s style property
 let para = document.getElementById("para");
-console.log(para.style.color);
 para.style.color = "green";
 let btn = document.getElementsByTagName("button")[0];
 
@@ -11,8 +10,10 @@ btn.addEventListener("click", function () {
     none.style.display = "block";
     none.style["font-style"] = "italic";
     none.style["font-weight"] = "bold";
+    btn.innerHTML = "Close it!";
   } else {
     none.style.display = "none";
+    btn.innerHTML = "click here to see it!";
   }
 });
 
@@ -21,8 +22,8 @@ btn.addEventListener("click", function () {
 // but here we pass a string not a number
 
 /**
- * The notation p > a {…} applies the given styles
+ * p > a {…} applies the given styles
  *  to all <a> tags that are direct children of <p> tags.
- * Similarly, p a {…} applies to all <a> tags inside <p> tags,
+ *  p a {…} applies to all <a> tags inside <p> tags,
  * whether they are direct or indirect children.
  */
