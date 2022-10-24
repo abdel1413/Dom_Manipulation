@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetBoundingRect Methd</title>
+    <!-- <script type="module" src="getBoundingRect.js" > -->
+        <script>
+        function callBackFuntion(){
+            const cont = document.getElementById("container")
+            const r = cont.getBoundingClientRect()
+            let d = document.getElementById("demo")
+            d.innerHTML = "Left: "+ r.left.toFixed() + " top: "+ r.top.toFixed() +
+                          " Height: "+ r.height + " Width: "+ r.width
+
+        }
+    </script>
+</head>
+<body>
+    <div onscroll="callBackFuntion()" style="height: 250px; width: 400px; overflow: auto; border:3px solid green">
+     <div id="container" style="width:350px; height: 250px; padding: 16px; border: 1px solid red;">
+        <h1>GetBoundingRect methd</h1>
+        <p>It returns the size of the the element and </p>
+        <p> It also returns the DOMRect whidth with 8 properties</p>
+        <p>Scroll to display bounding client rect of the element with the border</p>
+       </div>
+       <div style="height: 1000px; width: 1000px; background-color: green;"></div>
+    </div>
+
+    <div >displaying size info
+     <span id="demo"></span>
+    </div>
+</body>
+</html>
