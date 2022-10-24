@@ -5,17 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PageX&YOffsets</title>
-    <script type="module" src="pageXY.js"></script>
+    <!-- <script type="module" src="pageXY.js"></script> -->
+   <style>
+ div{
+     background-color: blue;
+      height: 2000px;
+       width: 1000px;
+    }
+   </style> 
     <script>
-        
+      function  myFunction(){
+            window.scrollBy(100,100);
+            console.log(window.pageXOffset)
+            console.log(window.pageYOffset)
+              alert("pageXOffset: " + window.pageXOffset + ", pageYOffset: " + window.pageYOffset)
+        //    alert("pageXOffset: "+ window.pageXOffset + " , pageYOffset "+ window.pageYOffset )
+        }
     </script>
 </head>
 <body>
     <h1>the window Objects</h1>
     <p>PageX and pageY properties</p>
     <p>click the buttom to start srolling</p>
-    <button >click me to scroll</button>
-    <div style="background-color: blue; height: 400px; width: 500px;"></div>
+    <button onclick="myFunction()" style="position: fixed;">click me to scroll</button>
+    <div ></div>
     
 </body>
 </html>
