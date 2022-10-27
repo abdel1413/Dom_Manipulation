@@ -54,34 +54,60 @@ const MOUNTAINS = [
 // create also td where we pass the properties
 //check if the type is number then align  to right
 // return the whole table
-// get the body and append thable function
+// // get the body and append thable function
+
+// function buildTable(data) {
+//   let table = document.createElement("table");
+//   console.log(table);
+//   let headRow = document.createElement("tr");
+//   console.log(headRow);
+//   let headNames = Object.keys(data[0]);
+//   console.log(headNames);
+//   headNames.forEach((r) => {
+//     let th = document.createElement("th");
+//     th.appendChild(document.createTextNode(r));
+//     headRow.appendChild(th);
+//   });
+//   table.appendChild(headRow);
+//   console.log(table);
+//   data.forEach((ob) => {
+//     let tr = document.createElement("tr");
+//     headNames.forEach((f) => {
+//       let td = document.createElement("td");
+//       console.log(td);
+//       td.appendChild(document.createTextNode(ob[f]));
+//       td.style.textAlign = "right";
+//       console.log(ob[f]);
+//       tr.appendChild(td);
+//       console.log(tr);
+//     });
+//     table.appendChild(tr);
+//     console.log(table);
+//   });
+//   return table;
+// }
+// document.querySelector("#mountains").appendChild(buildTable(MOUNTAINS));
+
 function buildTable(data) {
   let table = document.createElement("table");
-  console.log(table);
   let headRow = document.createElement("tr");
-  console.log(headRow);
-  let headNames = Object.keys(data[0]);
-  console.log(headNames);
-  headNames.forEach((r) => {
-    let th = document.createElement("th");
-    th.appendChild(document.createTextNode(r));
-    headRow.appendChild(th);
+  let keys = Object.keys(data[0]);
+  console.log(keys);
+  keys.forEach((f) => {
+    let headCell = document.createElement("th");
+    headCell.appendChild(document.createTextNode(f));
+    headRow.appendChild(headCell);
   });
   table.appendChild(headRow);
-  console.log(table);
-  data.forEach((ob) => {
+  data.forEach((el) => {
     let tr = document.createElement("tr");
-    headNames.forEach((f) => {
+    keys.forEach((f) => {
       let td = document.createElement("td");
-      console.log(td);
-      td.appendChild(document.createTextNode(ob[f]));
-      td.style.textAlign = "right";
-      console.log(ob[f]);
+      td.appendChild(document.createTextNode(el[f]));
+      td.style.textAlign = "center";
       tr.appendChild(td);
-      console.log(tr);
     });
     table.appendChild(tr);
-    console.log(table);
   });
   return table;
 }
